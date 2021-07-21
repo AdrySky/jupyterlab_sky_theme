@@ -2,7 +2,7 @@
 
 ![Github Actions Status](https://github.com/my_name/mytheme/workflows/Build/badge.svg)[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/my_name/mytheme/master?urlpath=lab)
 
-Simple sky theme
+Simple blue sky theme with different loading icon
 
 
 ## Requirements
