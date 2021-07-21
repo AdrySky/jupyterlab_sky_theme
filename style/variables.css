@@ -87,9 +87,9 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   --jp-border-width: 1px;
-  --jp-border-color0: var(--md-grey-400);
-  --jp-border-color1: var(--md-grey-400);
-  --jp-border-color2: var(--md-grey-300);
+  --jp-border-color0: #168EA8;
+  --jp-border-color1: #168EA8;
+  --jp-border-color2: #93D3E1;
   --jp-border-color3: var(--md-grey-200);
   --jp-border-radius: 2px;
 
@@ -118,10 +118,10 @@ all of MD as it is not optimized for dense, information rich UIs.
    */
 
   /* Defaults use Material Design specification */
-  --jp-ui-font-color0: rgba(0, 0, 0, 1);
-  --jp-ui-font-color1: rgba(0, 0, 0, 0.87);
-  --jp-ui-font-color2: rgba(0, 0, 0, 0.54);
-  --jp-ui-font-color3: rgba(0, 0, 0, 0.38);
+  --jp-ui-font-color0: rgba(101, 9, 32, 1);
+  --jp-ui-font-color1: rgba(101, 9, 32, 0.87);
+  --jp-ui-font-color2: rgba(101, 9, 32, 0.54);
+  --jp-ui-font-color3: rgba(101, 9, 32, 0.38);
 
   /*
    * Use these against the brand/accent/warn/error colors.
@@ -199,8 +199,8 @@ all of MD as it is not optimized for dense, information rich UIs.
 
   --jp-layout-color0: white;
   --jp-layout-color1: white;
-  --jp-layout-color2: var(--md-grey-200);
-  --jp-layout-color3: var(--md-grey-400);
+  --jp-layout-color2: #F8FFF0;
+  --jp-layout-color3: #c1eefc;
   --jp-layout-color4: var(--md-grey-600);
 
   /* Inverse Layout
@@ -209,18 +209,19 @@ all of MD as it is not optimized for dense, information rich UIs.
    * theme these would go from dark to light.
    */
 
-  --jp-inverse-layout-color0: #111111;
-  --jp-inverse-layout-color1: var(--md-grey-900);
-  --jp-inverse-layout-color2: var(--md-grey-800);
-  --jp-inverse-layout-color3: var(--md-grey-700);
-  --jp-inverse-layout-color4: var(--md-grey-600);
+   --jp-inverse-layout-color0: #003342;
+   --jp-inverse-layout-color1: #003e42;
+   --jp-inverse-layout-color2: #095f65;
+   --jp-inverse-layout-color3: #0a7487;
+   --jp-inverse-layout-color4: #8cced0;
 
   /* Brand/accent */
 
-  --jp-brand-color0: var(--md-blue-700);
-  --jp-brand-color1: var(--md-blue-500);
-  --jp-brand-color2: var(--md-blue-300);
-  --jp-brand-color3: var(--md-blue-100);
+  --jp-brand-color0: #1f2773;
+  --jp-brand-color1: #4d6aa0;
+  --jp-brand-color2: #97b6c8;
+  --jp-brand-color3: #ceeeef;
+  --jp-brand-color4: var(--md-blue-50);
 
   --jp-accent-color0: var(--md-green-700);
   --jp-accent-color1: var(--md-green-500);
@@ -365,4 +366,72 @@ all of MD as it is not optimized for dense, information rich UIs.
   /* Sidebar-related styles */
 
   --jp-sidebar-min-width: 180px;
+
+  /* Search-related styles */
+
+  --jp-search-toggle-off-opacity: 0.5;
+  --jp-search-toggle-hover-opacity: 0.8;
+  --jp-search-toggle-on-opacity: 1;
+  --jp-search-selected-match-background-color: rgb(245, 200, 0);
+  --jp-search-selected-match-color: black;
+  --jp-search-unselected-match-background-color: var(
+    --jp-inverse-layout-color0
+  );
+  --jp-search-unselected-match-color: var(--jp-ui-inverse-font-color0);
+
+  /* Icon colors that work well with light or dark backgrounds */
+  --jp-icon-contrast-color0: var(--md-purple-600);
+  --jp-icon-contrast-color1: var(--md-green-600);
+  --jp-icon-contrast-color2: var(--md-pink-600);
+  --jp-icon-contrast-color3: var(--md-blue-600);
+}
+
+/* Notebook */
+
+body[data-jp-theme-name="JupyterLab Sky"] .jp-Notebook {
+  background-image: url('./stringlights.svg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+}
+
+/* DirListing */
+
+body[data-jp-theme-name="JupyterLab Sky"] .jp-DirListing-item.jp-mod-running .jp-DirListing-itemIcon:before {
+  background-image: url('./ornament.svg');
+}
+
+/* New Custom Icon */
+
+body[data-jp-theme-name="JupyterLab Sky"] #jp-MainLogo {
+  
+  display:block;
+  background: url('images/raya.png') no-repeat; 
+  background-size: contain;
+  width: 27px;
+  height: 50px;
+  padding-left: 0px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  }
+
+/* Hide the original icon */
+
+body[data-jp-theme-name="JupyterLab Sky"] #jp-MainLogo > svg {
+  visibility: hidden;
+}
+
+#main-logo{
+  background: url('images/logo.png') no-repeat;
+  display: block;
+  background-size: auto;
+  position: relative;
+  left:600px;
+  top: 190px;
+  width: 30%;
+  height: 30%;
+}
+#main-logo > svg{
+  visibility: hidden;
 }
